@@ -266,21 +266,21 @@ def login_to_portal():
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     wait = WebDriverWait(driver, 20)
 
-    driver.get("http://172.16.75.4:8080/ords/r/sapphire/hris")
+    driver.get("enter your url")
     time.sleep(1)
     print("Portal opened successfully")
 
     username_field = wait.until(EC.presence_of_element_located((By.NAME, "P9999_USERNAME")))
     username_field.clear()
     time.sleep(1)
-    username_field.send_keys("TEST USER")
+    username_field.send_keys("USER NAME ")
     time.sleep(1)
     print("Username entered")
 
     password_field = driver.find_element(By.NAME, "P9999_PASSWORD")
     password_field.clear()
     time.sleep(1)
-    password_field.send_keys("123456")
+    password_field.send_keys("PASSWORD")
     time.sleep(1)
     print("Password entered")
 
